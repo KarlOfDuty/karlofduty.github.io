@@ -15,6 +15,11 @@
 }
 
 @font-face {
+    font-family: Whitney-Light;
+    src: url("../font/WhitneyHTF-Light.otf");
+}
+
+@font-face {
     font-family: Whitney-MediumCondensed;
     src: url("../font/WhitneyHTF-MediumCondensed.otf");
 }
@@ -39,7 +44,7 @@ body {
     padding: 0;
     color: var(--discord-text);
     background-color: var(--discord-bg3);
-    font-family: Whitney-Medium, Helvetica, sans-serif, Arial;
+    font-family: Whitney-Light, Helvetica, sans-serif, Arial;
 }
 
 div {
@@ -48,23 +53,58 @@ div {
     padding: 0;
 }
 
+a {
+    text-decoration: inherit;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
 .content {
     float: none;
     margin-left: auto;
     margin-right: auto;
-    width: 80vw;
+    width: 1200px;
     height: 100vh;
     background-color: var(--discord-bg2);
     box-sizing: border-box;
+    padding-right: 50px;
+}
+
+td {
+    vertical-align: top;
+    padding-top: 20px;
+    position: relative;
+    font-size: 23px;
+}
+
+.avatar {
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    float: left;
+}
+
+.username {
+    font-family: Whitney-Medium;
+    color: #007fa7;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .inviteField {
     background-color: var(--discord-bg3);
-    margin: 20px;
+    margin-top: 10px;
     padding: 20px;
     width: 700px;
     box-sizing: border-box;
     border-radius: 5px;
+    display: block;
     float: left;
 }
 
