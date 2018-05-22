@@ -1,13 +1,4 @@
 ﻿/*Discord colour scheme*/
-:root {
-    --discord-blue: #7289da;
-    --discord-bg1: #424549;
-    --discord-bg2: #36393e;
-    --discord-bg3: #2c2f33;
-    --discord-bg4: #282b30;
-    --discord-bg5: #1e2124;
-    --discord-text: #d0d0d0;
-}
 
 @font-face {
     font-family: Whitney-Medium;
@@ -19,15 +10,15 @@
     src: url("../font/WhitneyHTF-Light.otf");
 }
 
-@font-face {
+/*@font-face {
     font-family: Whitney-MediumCondensed;
     src: url("../font/WhitneyHTF-MediumCondensed.otf");
-}
+}*/
 
-@font-face {
+/*@font-face {
     font-family: Whitney-Book;
     src: url("../font/WhitneyHTF-Book.otf");
-}
+}*/
 
 @font-face {
     font-family: Whitney-SemiBold;
@@ -42,8 +33,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: var(--discord-text);
-    background-color: var(--discord-bg3);
+    color: #d0d0d0;
+    background-color: #2F3136;
     font-family: Whitney-Light, Helvetica, sans-serif, Arial;
 }
 
@@ -51,6 +42,7 @@ div {
     float: left;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 a {
@@ -59,6 +51,13 @@ a {
 
     a:hover {
         text-decoration: underline;
+        text-decoration-skip: none;
+        /* ReSharper disable once CssNotResolved */
+        text-decoration-skip-ink: none;
+    }
+
+    a:visited {
+        color: inherit;
     }
 
 .content {
@@ -66,10 +65,13 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
-    height: 100vh;
-    background-color: var(--discord-bg2);
+    min-height: 100vh;
+    background-color: #36393E;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
 td {
@@ -77,14 +79,17 @@ td {
     padding-top: 20px;
     position: relative;
     font-size: 23px;
+    padding-bottom: 20px;
+    border-bottom: #3E4146 solid 1px
 }
 
 .avatar {
     margin: 0;
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 100px;
-    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
+    -ms-border-radius: 50px;
     border-radius: 50px;
     float: left;
 }
@@ -93,16 +98,32 @@ td {
     font-family: Whitney-Medium;
     color: #007fa7;
     font-size: 25px;
-    display: block;
+    float: left;
+}
+
+.date {
+    font-family: Whitney-Medium;
+    font-size: 16px;
+    float: left;
+    color: #6D6E72;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+.messageInfoWrapper {
+    width: 100%;
     margin-bottom: 5px;
+    color: #007fa7;
 }
 
 .inviteField {
-    background-color: var(--discord-bg3);
+    background-color: #313338;
     margin-top: 10px;
     padding: 20px;
     width: 700px;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -ms-border-radius: 5px;
     border-radius: 5px;
     display: block;
     float: left;
@@ -111,6 +132,7 @@ td {
     .inviteField img {
         width: 100px;
         height: 100px;
+        -ms-border-radius: 30px;
         border-radius: 30px;
         display: block;
         margin: 0;
@@ -127,6 +149,7 @@ td {
     .inviteField .serverText {
         width: 560px;
         padding: 15px;
+        -moz-box-sizing: border-box;
         box-sizing: border-box;
         font-weight: 600;
     }
@@ -145,6 +168,7 @@ td {
         height: 70px;
         font-size: 22px;
         font-family: Whitney-Medium;
+        -ms-border-radius: 5px;
         border-radius: 5px;
         text-align: center;
         color: white;
@@ -154,6 +178,48 @@ td {
     }
 
         .inviteField .joinButton:hover {
+            -ms-transition: 0.2s ease-in;
+            -o-transition: 0.2s ease-in;
+            -webkit-transition: 0.2s ease-in;
             transition: 0.2s ease-in;
             background-color: #399d70;
         }
+
+.embedField {
+    background-color: #33353B;
+    margin-top: 10px;
+    padding: 20px;
+    width: 700px;
+    min-height: 100px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    border-left: 5px #F96854 solid;
+}
+
+    .embedField h3 {
+        color: #87909C;
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        font-family: Whitney-Light;
+    }
+
+    .embedField h1 {
+        font-size: 20px;
+        color: #007FA7;
+        margin: 0;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-family: Whitney-SemiBold;
+    }
+
+    .embedField img {
+        border-radius: 5px;
+        max-width: 660px;
+    }
