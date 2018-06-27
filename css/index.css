@@ -35,7 +35,7 @@ body {
     padding: 0;
     color: #d0d0d0;
     background-color: #2F3136;
-    font-family: Whitney-Light, Helvetica, sans-serif, Arial;
+    font-family: Whitney-Light, Helvetica, sans-serif;
 }
 
 div {
@@ -52,14 +52,15 @@ a {
     a:hover {
         text-decoration: underline;
         text-decoration-skip: none;
-        /* ReSharper disable once CssNotResolved */
         text-decoration-skip-ink: none;
     }
 
     a:visited {
         color: inherit;
     }
-
+b{
+    font-family: Whitney-SemiBold;
+}
 .content {
     float: none;
     margin-left: auto;
@@ -78,7 +79,7 @@ td {
     vertical-align: top;
     padding-top: 20px;
     position: relative;
-    font-size: 23px;
+    font-size: 20px;
     padding-bottom: 20px;
     border-bottom: #3E4146 solid 1px
 }
@@ -87,23 +88,22 @@ td {
     margin: 0;
     margin-left: 20px;
     margin-right: 20px;
-    width: 75px;
-    height: 75px;
-    -ms-border-radius: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     float: left;
 }
 
 .username {
-    font-family: Whitney-Medium;
+    font-family: Whitney-Medium, Helvetica, sans-serif;
     color: #007fa7;
-    font-size: 25px;
+    font-size: 22px;
     float: left;
 }
 
 .date {
-    font-family: Whitney-Medium;
-    font-size: 16px;
+    font-family: Whitney-Medium, Helvetica, sans-serif;
+    font-size: 14px;
     float: left;
     color: #6D6E72;
     margin-top: 9px;
@@ -120,55 +120,53 @@ td {
     background-color: #313338;
     margin-top: 10px;
     padding: 20px;
-    width: 700px;
+    width: 580px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -ms-border-radius: 5px;
     border-radius: 5px;
     display: block;
     float: left;
 }
 
     .inviteField img {
-        width: 100px;
-        height: 100px;
-        -ms-border-radius: 30px;
+        width: 75px;
+        height: 75px;
         border-radius: 30px;
         display: block;
         margin: 0;
     }
 
     .inviteField h3 {
-        font-size: 16px;
+        font-size: 15px;
         margin: 0;
         margin-bottom: 10px;
         letter-spacing: 2px;
-        font-family: Whitney-SemiBold;
+        font-family: Whitney-SemiBold, Helvetica, sans-serif;
     }
 
     .inviteField .serverText {
-        width: 560px;
-        padding: 15px;
+        width: 460px;
+        padding-top: 10px;
+        padding-left: 10px;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         font-weight: 600;
     }
 
         .inviteField .serverText h1 {
-            font-size: 24px;
+            font-size: 22px;
             color: white;
             margin: 0;
             margin-bottom: 5px;
-            font-family: Whitney-SemiBold;
+            font-family: Whitney-SemiBold, Helvetica, sans-serif;
         }
 
     .inviteField .joinButton {
         float: right;
-        width: 150px;
-        height: 70px;
+        width: 120px;
+        height: 60px;
         font-size: 22px;
-        font-family: Whitney-Medium;
-        -ms-border-radius: 5px;
+        font-family: Whitney-Medium, Helvetica, sans-serif;
         border-radius: 5px;
         text-align: center;
         color: white;
@@ -178,7 +176,6 @@ td {
     }
 
         .inviteField .joinButton:hover {
-            -ms-transition: 0.2s ease-in;
             -o-transition: 0.2s ease-in;
             -webkit-transition: 0.2s ease-in;
             transition: 0.2s ease-in;
@@ -193,7 +190,6 @@ td {
     min-height: 100px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -ms-border-radius: 5px;
     border-radius: 5px;
     display: block;
     float: left;
@@ -207,7 +203,7 @@ td {
         margin: 0;
         margin-bottom: 5px;
         letter-spacing: 1px;
-        font-family: Whitney-Light;
+        font-family: Whitney-Light, Helvetica, sans-serif;
     }
 
     .embedField h1 {
@@ -216,7 +212,7 @@ td {
         margin: 0;
         margin-bottom: 10px;
         letter-spacing: 1px;
-        font-family: Whitney-SemiBold;
+        font-family: Whitney-SemiBold, Helvetica, sans-serif;
     }
 
     .embedField img {
