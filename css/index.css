@@ -1,4 +1,4 @@
-﻿/*Discord colour scheme*/
+/*Discord colour scheme*/
 
 @font-face {
     font-family: Whitney-Medium;
@@ -59,7 +59,7 @@ a {
         color: inherit;
     }
 b{
-    font-family: Whitney-SemiBold;
+    font-family: Whitney-SemiBold, Helvetica, sans-serif;
 }
 .content {
     float: none;
@@ -181,41 +181,3 @@ td {
             transition: 0.2s ease-in;
             background-color: #399d70;
         }
-
-.embedField {
-    background-color: #33353B;
-    margin-top: 10px;
-    padding: 20px;
-    width: 700px;
-    min-height: 100px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 5px;
-    display: block;
-    float: left;
-    overflow: hidden;
-    border-left: 5px #F96854 solid;
-}
-
-    .embedField h3 {
-        color: #87909C;
-        font-size: 16px;
-        margin: 0;
-        margin-bottom: 5px;
-        letter-spacing: 1px;
-        font-family: Whitney-Light, Helvetica, sans-serif;
-    }
-
-    .embedField h1 {
-        font-size: 20px;
-        color: #007FA7;
-        margin: 0;
-        margin-bottom: 10px;
-        letter-spacing: 1px;
-        font-family: Whitney-SemiBold, Helvetica, sans-serif;
-    }
-
-    .embedField img {
-        border-radius: 5px;
-        max-width: 660px;
-    }
