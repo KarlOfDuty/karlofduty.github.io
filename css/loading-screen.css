@@ -1,0 +1,170 @@
+@font-face {
+    font-family: Coolvetica;
+    src: url("../font/coolvetica.ttf");
+}
+
+@font-face {
+    font-family: Coolvetica-1999;
+    src: url("../font/coolvetica-1999.ttf");
+}
+
+@font-face {
+    font-family: Coolvetica-Condensed;
+    src: url("../font/coolvetica-condensed.ttf");
+}
+
+body
+{
+    text-align: center;
+    background: #1194f0;
+}
+a
+{
+    color: unset;
+}
+
+.content
+{
+    display: inline-block;
+}
+
+.content div
+{
+    float: left;
+}
+
+table
+{
+    text-align: left;
+
+    border-collapse: separate;
+    border-spacing: 0px 20px;
+}
+
+#current-server
+{
+    vertical-align: top;
+    border: #04ba00 solid 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #05ea00;
+    width: 800px;
+    height: 160px;
+    padding: 5px;
+    background: #fff;
+    overflow: hidden;
+}
+
+    #current-server:hover
+    {
+        border: #04db00 solid 3px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px #05ff00;
+    }
+
+td
+{
+    vertical-align: top;
+    border: #b4b4b4 solid 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #b4b4b4;
+    width: 800px;
+    height: 140px;
+    padding: 5px;
+    background: #fff;
+}
+
+    td:hover
+    {
+        border: #d1d1d1 solid 3px;
+        box-shadow: 0px 0px 5px #d1d1d1;
+    }
+
+.icon
+{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.icon img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.description
+{
+    width: 600px;
+    height: 100px;
+    margin-left: 5px;
+}
+
+#status-area
+{
+    width: 610px;
+    margin-left: 5px;
+    color: #6D6E72;
+    font-size: 16px;
+    font-family: Coolvetica Helvetica sans-serif;
+}
+
+#current-status
+{
+    float: left;
+}
+
+#current-map
+{
+    float: right;
+}
+
+#loading-bar
+{
+    margin: 0 0 10px 0;
+    width: 100%;
+    height: 8px;
+    position: relative;
+    //background: #a9abb1;
+}
+
+#current-status
+{
+    float: left;
+}
+
+#percentage
+{
+    float: right;
+}
+
+.join-link
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+h1
+{
+    color: #fff;
+    font-family: Coolvetica-1999, Helvetica, sans-serif;
+    letter-spacing: 0.04em;
+    //text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
+}
+
+.gamemode
+{
+    font-size: 27px;
+    color: #1194f0;
+    font-family: Coolvetica, Helvetica, sans-serif;
+    letter-spacing: 0.04em;
+    margin: 5px 0 10px 0;
+    //text-shadow: -1px 0 2px #cacaca, 0 1px 2px #cacaca, 1px 0 2px #cacaca, 0 -1px 2px #cacaca;
+}
+
+p
+{
+    font-family: Coolvetica, Helvetica, sans-serif;
+    margin: 0;
+}

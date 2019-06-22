@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta content="KarlofDuty.com - Garry's Mod loading screen" property="og:title">
+
+    <meta content="Loading screen for all of my Garry's Mod servers." property="og:description">
+
+    <meta content="img/title.png" name="twitter:card">
+    <meta content="#0050ff" name="theme-color">
+    <title>KarlofDuty.com - Garry's Mod loading screen</title>
+    <link type="text/css" href="../css/loading-screen.css" rel="stylesheet" />
+    <link type="application/json+oembed" href="../js/oembed.json" />
+    <script src="../js/lib/jquery-3.4.1.min.js"></script>
+    <script src="../js/lib/progressbar.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <h1>KarlofDuty.com<br>Garry's Mod servers:</h1>
+    <table>
+        <tr>
+            <td id="current-server">
+                <div class="icon">
+                    <img id="current-icon" src="../img/garrysmod.jpg" alt="Server logo">
+                </div>
+                <div class="description">
+                    <h2 class="gamemode" id="current-gamemode">Garry's Mod Server</h2>
+                    <p>A Garry's Mod server</p>
+                </div>
+                <div id="status-area">
+                    <span id="current-status">...</span>
+                    <span id="current-map">...</span>
+                    <div id="loading-bar"></div><br>
+                    <span id="current-file">...</span>
+                    <span id="percentage">0%</span>
+                </div>
+            </td>
+        </tr>
+        <tr id="terrortown">
+            <td>
+                <a class="join-link" href="steam://connect/95.217.45.17:27015">
+                    <div class="icon">
+                        <img src="../img/ttt.png" alt="Server logo">
+                    </div>
+                    <div class="description">
+                        <h2 class="gamemode">Trouble in Terrorist Town</h2>
+                        <p>Test</p>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr id="breach">
+            <td>
+                <a class="join-link" href="steam://connect/95.217.45.17:27018">
+                    <div class="icon">
+                        <img src="../img/breach.png" alt="Server logo">
+                    </div>
+                    <div class="description">
+                        <h2 class="gamemode">Breach</h2>
+                        <p>A containment breach has occurred at a foundation site, will you survive the deadly SCPs?</p>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        <tr id="murder">
+            <td>
+                <a class="join-link" href="steam://connect/95.217.45.17:27017">
+                    <div class="icon">
+                        <img src="../img/murder.png" alt="Server logo">
+                    </div>
+                    <div class="description">
+                        <h2 class="gamemode">Murder</h2>
+                        <p>You are locked in an area with a murderer and a group of bystanders, can you figure out who the murderer is before there is no one left to stop them?</p>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+</div>
+</body>
+</html>
+<script src="../js/loading_screen.js"></script>
