@@ -55,13 +55,6 @@ table
     overflow: hidden;
 }
 
-    #current-server:hover
-    {
-        border: #04db00 solid 3px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 3px #05ff00;
-    }
-
 td
 {
     vertical-align: top;
@@ -73,12 +66,6 @@ td
     padding: 5px;
     background: #fff;
 }
-
-    td:hover
-    {
-        border: #d1d1d1 solid 3px;
-        box-shadow: 0px 0px 5px #d1d1d1;
-    }
 
 .icon
 {
