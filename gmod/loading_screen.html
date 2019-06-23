@@ -29,10 +29,9 @@
                     <p>Waiting for server info...</p>
                 </div>
                 <div class="status-area">
-                    <span id="current-status">...</span>
                     <span id="current-map">...</span>
                     <div id="loading-bar"></div><br>
-                    <span id="current-file">...</span>
+                    <span id="current-status">...</span>
                     <span id="percentage">0%</span>
                 </div>
             </td>
@@ -81,7 +80,6 @@
     var allFiles = 0;
     var filesLeft = 0;
     var loadingBar = null;
-    var currentFile = "";
     var currentStatus = "";
 
     loadingBar = new ProgressBar.Line("#loading-bar",
@@ -114,7 +112,7 @@
         $("#current-server .description").replaceWith($("#" + gamemode + " .description"));
 
         // Sets the map name
-        $("#current-map").text(mapname);
+        $("#current-map").text("Joining level: " + mapname);
     }
 
     // Ran when the total number of files to be downloaded is set
@@ -125,8 +123,8 @@
 
     function DownloadingFile(fileName)
     {
-        currentFile = fileName;
-        $("#current-file").text(fileName);
+        currentStatus = fileName;
+        $("#current-status").text("Downloading " + fileName);
     }
 
     function SetStatusChanged(status)
@@ -146,7 +144,7 @@
     }
 
     // Developer functions, should not be active in production
-    //GameDetails("server name", "karlofduty.com", "ttt_stargate_b3", 20, "STEAM:0:1:543355", "murder");
+    //GameDetails("server name", "karlofduty.com", "ttt_stargate_b3", 20, "STEAM:0:1:543355", "terrortown");
     //SetFilesTotal(10);
     //SetFilesNeeded(5);
     //DownloadingFile("player_viewmodel_ttt.mod");
