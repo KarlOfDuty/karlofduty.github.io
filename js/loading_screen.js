@@ -15,7 +15,7 @@ loadingBar = new ProgressBar.Line("#loading-bar",
         svgStyle: {width: '100%', height: '100%'},
         from: {color: '#777777'},
         to: {color: '#1194f0'},
-        step: (state, loadingBar) =>
+        step: function (state, loadingBar)
         {
             $("#percentage").text(Math.round(loadingBar.value() * 100) + '%');
         }
