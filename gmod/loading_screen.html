@@ -131,9 +131,13 @@
     {
         currentStatus = status;
         $("#current-status").text(status);
-        if(status === "Sending client info...")
+        if(status === "Deleting leftovers...")
         {
-            loadingBar.animate(1);
+            loadingBar.animate(0.8);
+        }
+        else if(status === "Sending client info...")
+        {
+            loadingBar.animate(0.9);
         }
     }
 
