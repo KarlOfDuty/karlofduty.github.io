@@ -113,7 +113,6 @@ td
     width: 100%;
     height: 8px;
     position: relative;
-    //background: #a9abb1;
 }
 
 #current-status
@@ -138,7 +137,6 @@ h1
     color: #fff;
     font-family: Coolvetica-1999, Helvetica, sans-serif;
     letter-spacing: 0.04em;
-    //text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
 }
 
 .gamemode
@@ -148,7 +146,6 @@ h1
     font-family: Coolvetica, Helvetica, sans-serif;
     letter-spacing: 0.04em;
     margin: 5px 0 10px 0;
-    //text-shadow: -1px 0 2px #cacaca, 0 1px 2px #cacaca, 1px 0 2px #cacaca, 0 -1px 2px #cacaca;
 }
 
 p

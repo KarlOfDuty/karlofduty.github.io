@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Coolvetica;
+    src: url("../font/coolvetica.ttf");
+}
+
+@font-face {
+    font-family: Coolvetica-1999;
+    src: url("../font/coolvetica-1999.ttf");
+}
+
+@font-face {
+    font-family: Coolvetica-Condensed;
+    src: url("../font/coolvetica-condensed.ttf");
+}
+
+h1
+{
+    color: #fff;
+    font-family: Coolvetica-1999, Helvetica, sans-serif;
+    letter-spacing: 0.04em;
+}
+
+h2
+{
+    font-size: 27px;
+    color: #1194f0;
+    font-family: Coolvetica, Helvetica, sans-serif;
+    letter-spacing: 0.04em;
+    margin: 5px 0 10px 0;
+}
+
+body
+{
+    text-align: center;
+    background: #1194f0;
+}
+
+
+.content
+{
+    display: inline-block;
+}
+
+.content div
+{
+    float: left;
+}
+
+table
+{
+    text-align: left;
+
+    border-collapse: separate;
+    border-spacing: 0px 20px;
+}
+
+td
+{
+    vertical-align: top;
+    border: #b4b4b4 solid 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #b4b4b4;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    padding: 10px 30px 10px 30px;
+}
+
+p
+{
+    font-family: Coolvetica, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a
+{
+    color: grey;
+    text-decoration: unset;
+}
+
+a:visited
+{
+    color: grey;
+    text-decoration: unset;
+}
+
+ol li
+{
+    font-family: Coolvetica, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+ul li
+{
+    font-family: Coolvetica, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+.innocent
+{
+    color: #05ea00;
+}
+
+.detective
+{
+    color: blue;
+}
+
+.phantom
+{
+    color: #1194f0;
+}
+
+.glitch
+{
+    color: orange;
+}
+
+.swapper
+{
+    color: #7100cd;
+}
+
+.jester
+{
+    color: #a400da;
+}
+
+.traitor
+{
+    color: #da0003;
+}
+
+.assassin
+{
+    color: #6e2d00;
+}
+
+.hypnotist
+{
+    color: #ff3ec4;
+}
