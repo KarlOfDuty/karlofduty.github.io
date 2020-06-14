@@ -76,6 +76,7 @@ a
 {
     color: grey;
     text-decoration: unset;
+    text-decoration-line: none;
 }
 
 a:visited
