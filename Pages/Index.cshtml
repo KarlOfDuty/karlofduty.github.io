@@ -1,75 +1,128 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+  ViewData["Title"] = "Home page";
 }
 
 <div class="row mb-4">
-    <div class="col-12">
-        <div class="card shadow-sm">
-            <div class="card-body d-flex align-items-center">
-                <img src="img/tardisGifSmall.gif" alt="Tardis avatar" class="rounded-circle me-3" style="width: 64px; height: 64px;">
-                <div>
-                    <h5 class="card-title mb-0">KarlofDuty</h5>
-                    <p class="text-muted small mb-0">Programmer & Server Host</p>
-                </div>
-            </div>
+  <div class="col-12">
+    <div class="card shadow-sm">
+      <div class="card-body d-flex align-items-center">
+        <img src="img/tardisGifSmall.gif" alt="Tardis avatar" class="page-header-icon rounded-circle me-3">
+        <div>
+          <h5 class="card-title mb-0">KarlofDuty</h5>
+          <p class="text-muted small mb-0">Software Engineer & Server Administrator</p>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<div class="row mb-4">
-    <div class="col-md-8">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h4 class="card-title">About</h4>
-                <p class="card-text">
-                    I make Discord bots and other small projects on Github, and run some game servers.
-                </p>
-                <div class="d-grid gap-2 d-md-block">
-                    <a href="https://discord.gg/C5qMvkj" class="btn btn-primary" target="_blank">Join Discord</a>
-                    <a href="https://github.com/sponsors/KarlOfDuty" class="btn btn-outline-success" target="_blank">Sponsor on GitHub</a>
+<div class="row mb-3">
+  <div class="col-md-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h4 class="card-title">About</h4>
+        <p class="card-text">
+          I am a software developer making Discord bots, server tools.
+          All of my work is available for free and open source on GitHub.
+        </p>
+        <p class="card-text">
+          The software projects are available from my RPM repo, DEB repo, the AUR, and manual download on each respective Github project.
+        </p>
+        <p class="card-text">
+          I also host some game servers which you can find in the Discord server to the left.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header border-bottom-0 pb-0">
+        <h5 class="card-title mb-0">Links</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 p-0">
+            <div class="list-group list-group-flush">
+              <a href="https://github.com/KarlOfDuty" target="_blank" class="list-group-item list-group-item-action border-0 px-0 d-flex align-items-center">
+                <img src="img/github-logo-black.svg" alt="GitHub" class="link-icon ms-3 me-3">
+                <div class="flex-fill">
+                  <p class="mb-0 small fw-bold text-reset">GitHub</p>
+                  <p class="mb-0 small text-muted">@@KarlOfDuty</p>
                 </div>
+              </a>
+              <a href="https://discord.gg/C5qMvkj" target="_blank" class="list-group-item list-group-item-action border-0 px-0 d-flex align-items-center">
+                <img src="img/discord-logo-colourful.svg" alt="Discord" class="link-icon ms-3 me-3">
+                <div class="flex-fill">
+                  <p class="mb-0 small fw-bold text-reset">Discord</p>
+                  <p class="mb-0 small text-muted">Join the Discord server</p>
+                </div>
+              </a>
             </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Contact</h5>
-
+          </div>
+          <div class="col-md-4 p-0">
+            <div class="list-group list-group-flush">
+              <a href="https://aur.archlinux.org/packages?SeB=m&K=KarlofDuty" target="_blank" class="list-group-item list-group-item-action border-0 px-0 d-flex align-items-center">
+                <img src="img/archlinux-logo-colourful.svg" alt="AUR" class="link-icon ms-3 me-3">
+                <div class="flex-fill">
+                  <p class="mb-0 small fw-bold text-reset">AUR Projects</p>
+                  <p class="mb-0 small text-muted">Arch Linux packages</p>
+                </div>
+              </a>
+              <a href="https://repo.karlofduty.com" target="_blank" class="list-group-item list-group-item-action border-0 px-0 d-flex align-items-center">
+                <img src="img/download-cloud-black.svg" alt="Repo" class="link-icon ms-3 me-3">
+                <div class="flex-fill">
+                  <p class="mb-0 small fw-bold text-reset">Repo Server</p>
+                  <p class="mb-0 small text-muted">RPM and DEB repos</p>
+                </div>
+              </a>
             </div>
+          </div>
+          <div class="col-md-4 p-0">
+            <div class="list-group list-group-flush">
+              <a href="https://jenkins.karlofduty.com" target="_blank" class="list-group-item list-group-item-action border-0 px-0 d-flex align-items-center">
+                <img src="img/jenkins-logo-ukraine.svg" alt="Jenkins" class="link-icon ms-3 me-3">
+                <div class="flex-fill">
+                  <p class="mb-0 small fw-bold text-reset">Jenkins</p>
+                  <p class="mb-0 small text-muted">Build server</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <h3 class="mb-3 mt-7">Featured Projects</h3>
 <div class="row">
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Gmod Store Projects</h5>
-                <p class="card-text small">Various scripts and tools for Garry's Mod servers.</p>
-                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
-            </div>
-        </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title">SCPDiscord</h5>
+        <p class="card-text small">Various scripts and tools for Garry's Mod servers.</p>
+        <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+      </div>
     </div>
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Server Software</h5>
-                <p class="card-text small">Custom built software for game server management and automation.</p>
-                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
-            </div>
-        </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title">SupportBoi</h5>
+        <p class="card-text small">Custom built software for game server management and automation.</p>
+        <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+      </div>
     </div>
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Game Mods</h5>
-                <p class="card-text small">Modifications for various games including SCP, Minecraft, and more.</p>
-                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
-            </div>
-        </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h5 class="card-title">Game Mods</h5>
+        <p class="card-text small">Modifications for various games including SCP, Minecraft, and more.</p>
+        <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+      </div>
     </div>
+  </div>
 </div>
