@@ -8,55 +8,26 @@
     <meta content="img/title.png" name="twitter:card">
     <meta content="#0050ff" name="theme-color">
     <title>KarlofDuty's Game servers & mods</title>
-    <link type="text/css" href="css/index.css" rel="stylesheet" />
-    <link type="application/json+oembed" href="js/oembed.json" />
-
-    @*<title>@ViewData["Title"] - karlofduty.github.io</title>*@
-    <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/dashbrd/css/libs.bundle.css"/>
     <link rel="stylesheet" href="~/lib/dashbrd/css/theme.bundle.css"/>
-    <link type="text/css" href="css/index.css" rel="stylesheet" />
-    <link type="application/json+oembed" href="js/oembed.json" />
     @await RenderSectionAsync("CSS", required: false)
 </head>
-<body>
-@*<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">karlofduty.github.io</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>*@
+<body class="pt-5">
+
 <div class="container">
     <main role="main">
         @RenderBody()
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2026 - karlofduty.github.io - <a asp-area="" asp-page="/Privacy">Privacy</a>
+<footer class="footer text-muted py-4 mt-auto">
+    <div class="container text-center">
+        &copy; 2026 - KarlofDuty - Website built with <a href="https://github.com/simzikov/dashbrd">Dashbrd</a>
     </div>
 </footer>
 
-<script src="~/lib/jquery/jquery.min.js"></script>
 <script src="~/lib/dashbrd/js/vendor.bundle.js"></script>
 <script src="~/lib/dashbrd/js/theme.bundle.js"></script>
-@*<script src="~/js/site.js" asp-append-version="true"></script>*@
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

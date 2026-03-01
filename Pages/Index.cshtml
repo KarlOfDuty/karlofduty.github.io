@@ -4,60 +4,72 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="content">
-    <table>
-        <tr>
-            <td>
-                <img class="avatar" src="img/tardisGifSmall.gif" alt="Tardis avatar" />
-            </td>
-            <td>
-                <div class="messageInfoWrapper">
-                    <a href="https://discord.gg/C5qMvkj" class="username">KarlofDuty</a><span class="date">2018-04-02</span>
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body d-flex align-items-center">
+                <img src="img/tardisGifSmall.gif" alt="Tardis avatar" class="rounded-circle me-3" style="width: 64px; height: 64px;">
+                <div>
+                    <h5 class="card-title mb-0">KarlofDuty</h5>
+                    <p class="text-muted small mb-0">Programmer & Server Host</p>
                 </div>
-                Hello! This website serves mostly as a gateway to the Discord server.<br />
-                <br/>
-                I am Karl Essinger, programmer and server host. The Discord server is for those who wish to join any of the server communities
-                or are interested in any of my GitHub projects.<br/>
-                <br/>
-                The Discord server is split up into different sections and you choose which you want to join so you won't see any channels that
-                are unrelated to you. The current sections you can join are SCP, Dystopia, Garry's Mod, Minecraft, Paradox Games, and Github.<br/>
-                <br />
-                <a href="https://discord.gg/C5qMvkj" style="color: #0096CF;">https://discord.gg/C5qMvkj</a><br />
-                <div class="inviteField">
-                    <h3>YOU'VE BEEN INVITED TO JOIN A SERVER</h3>
-                    <div><img src="img/tardisIcon.jpg" alt="Server logo" /></div>
-                    <div class="serverText">
-                        <div>
-                            <h1>KarlofDuty's Stuff</h1>
-                        </div>
-                        <form style="display: inline" action="https://discord.gg/C5qMvkj" method="get">
-                            <button class="joinButton">Join</button>
-                        </form>
-                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h4 class="card-title">About</h4>
+                <p class="card-text">
+                    I make Discord bots and other small projects on Github, and run some game servers.
+                </p>
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="https://discord.gg/C5qMvkj" class="btn btn-primary" target="_blank">Join Discord</a>
+                    <a href="https://github.com/sponsors/KarlOfDuty" class="btn btn-outline-success" target="_blank">Sponsor on GitHub</a>
                 </div>
-            </td>
-        </tr>
-        <tr>
-            <td style="border: none;">
-                <img class="avatar" src="img/tardisGifSmall.gif" alt="Tardis avatar" />
-            </td>
-            <td style="border: none;">
-                <div class="messageInfoWrapper">
-                    <a href="https://discord.gg/C5qMvkj" class="username">KarlofDuty</a><span class="date">2019-11-11</span>
-                </div>
-                Hello again, I have recently moved over from using Patreon for donations and server perks to GitHub Sponsors, it works exactly the same except there are no fees at all and GitHub will even pay part of your pledge for you. The money helps me pay the server bills and the time I spend working on them.<br>
-                <br>
-                If you sponsor me you get special in-game ranks on the game servers with different perks. If you are interested in the software I develop on GitHub I will also provide you with prioritized support. Check it out here: <a href="https://github.com/sponsors/KarlOfDuty" style="color: #0096CF;">https://github.com/sponsors/KarlOfDuty</a><br>
-                <br>
-                <b>Server Specs:</b><br>
-                <br>
-                <b>Processor:</b> Intel Core i7-8700 Hexa-Core (6x 4.60 GHz /w hyperthreading)<br>
-                <b>Memory:</b> 64 GB<br>
-                <b>Drive:</b> 2x 1 TB NVMe SSDs (Configured in Raid 1 for data redundancy and performance)<br>
-            </td>
-        </tr>
-    </table>
-    <br />
-    <br />
-    <br />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Contact</h5>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="mb-3 mt-7">Featured Projects</h3>
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Gmod Store Projects</h5>
+                <p class="card-text small">Various scripts and tools for Garry's Mod servers.</p>
+                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Server Software</h5>
+                <p class="card-text small">Custom built software for game server management and automation.</p>
+                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Game Mods</h5>
+                <p class="card-text small">Modifications for various games including SCP, Minecraft, and more.</p>
+                <a href="https://github.com/KarlOfDuty" class="btn btn-sm btn-outline-primary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </div>
 </div>
