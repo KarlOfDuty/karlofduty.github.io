@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="test\test\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="test\test\appsettings.json" />
+      <_ContentIncludedByDefault Remove="test\test\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="test\test\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="test\test\obj\test.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="test\test\Properties\launchSettings.json" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="test\test\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\dashbrd\progressbar\progressbar.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\dashbrd\progressbar\progressbar.min.js.map" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="test\.idea\.idea.test\.idea\.gitignore" />
+      <Content Include="test\.idea\.idea.test\.idea\discord.xml" />
+      <Content Include="test\.idea\.idea.test\.idea\encodings.xml" />
+      <Content Include="test\.idea\.idea.test\.idea\indexLayout.xml" />
+      <Content Include="test\.idea\.idea.test\.idea\projectSettingsUpdater.xml" />
+      <Content Include="test\.idea\.idea.test\.idea\vcs.xml" />
+      <Content Include="test\.idea\.idea.test\.idea\workspace.xml" />
+      <Content Include="test\test.slnx" />
+      <Content Include="test\test\test.csproj" />
+      <Content Remove="test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="test\**" />
+    </ItemGroup>
+
+</Project>

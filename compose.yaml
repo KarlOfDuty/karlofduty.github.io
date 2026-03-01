@@ -1,0 +1,7 @@
+﻿services:
+  karlofduty.github.io:
+    image: karlofduty.github.io
+    build:
+      context: .
+      dockerfile: Dockerfile
+
