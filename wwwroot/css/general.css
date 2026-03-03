@@ -1,11 +1,16 @@
+@font-face {
+  font-family: Inter;
+  src: url("../font/Inter-VariableFont_opsz,wght.ttf");
+}
+
 .page-header-icon {
   width: 3rem;
   height: 3rem;
 }
 
 .link-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .link-column {
