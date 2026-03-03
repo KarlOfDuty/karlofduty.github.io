@@ -1,75 +1,246 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta content="KarlofDuty.com - Game servers and mods" property="og:title">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <meta content="I create server software and game mods and also host my own servers for a number of games." property="og:description">
+  <title>KarlofDuty.com</title>
+  <link rel="icon" type="image/icon" href="~/img/favicon.ico" />
+  <meta content="KarlofDuty.com - Game servers and mods" property="og:title">
+  <meta content="I create server software and game mods and also host my own servers for a number of games." property="og:description">
+  <meta content="img/title.png" name="twitter:card"> <!-- TODO: Change this image -->
+  <meta content="#0050ff" name="theme-color">
 
-    <meta content="img/title.png" name="twitter:card">
-    <meta content="#0050ff" name="theme-color">
-    <title>KarlofDuty's Game servers & mods</title>
-    <link type="text/css" href="css/index.css" rel="stylesheet" />
-    <link type="application/json+oembed" href="js/oembed.json" />
+  <!-- Dashbrd -->
+  <link rel="stylesheet" href="lib/dashbrd/css/libs.bundle.css"/>
+  <link rel="stylesheet" href="lib/dashbrd/css/theme.bundle.css"/>
+
+  <link rel="stylesheet" href="css/general.css"/>
 </head>
-<body>
-    <div class="content">
-        <table>
-            <tr>
-                <td>
-                    <img class="avatar" src="img/tardisGifSmall.gif" alt="Tardis avatar" />
-                </td>
-                <td>
-                    <div class="messageInfoWrapper">
-                        <a href="https://discord.gg/C5qMvkj" class="username">KarlofDuty</a><span class="date">2018-04-02</span>
-                    </div>
-                    Hello! This website serves mostly as a gateway to the Discord server.<br />
-                    <br/>
-                    I am Karl Essinger, programmer and server host. The Discord server is for those who wish to join any of the server communities
-                    or are interested in any of my GitHub projects.<br/>
-                    <br/>
-                    The Discord server is split up into different sections and you choose which you want to join so you won't see any channels that
-                    are unrelated to you. The current sections you can join are SCP, Dystopia, Garry's Mod, Minecraft, Paradox Games, and Github.<br/>
-                    <br />
-                    <a href="https://discord.gg/C5qMvkj" style="color: #0096CF;">https://discord.gg/C5qMvkj</a><br />
-                    <div class="inviteField">
-                        <h3>YOU'VE BEEN INVITED TO JOIN A SERVER</h3>
-                        <div><img src="img/tardisIcon.jpg" alt="Server logo" /></div>
-                        <div class="serverText">
-                            <div>
-                                <h1>KarlofDuty's Stuff</h1>
-                            </div>
-                            <form style="display: inline" action="https://discord.gg/C5qMvkj" method="get">
-                                <button class="joinButton">Join</button>
-                            </form>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="border: none;">
-                    <img class="avatar" src="img/tardisGifSmall.gif" alt="Tardis avatar" />
-                </td>
-                <td style="border: none;">
-                    <div class="messageInfoWrapper">
-                        <a href="https://discord.gg/C5qMvkj" class="username">KarlofDuty</a><span class="date">2019-11-11</span>
-                    </div>
-                    Hello again, I have recently moved over from using Patreon for donations and server perks to GitHub Sponsors, it works exactly the same except there are no fees at all and GitHub will even pay part of your pledge for you. The money helps me pay the server bills and the time I spend working on them.<br>
-                    <br>
-                    If you sponsor me you get special in-game ranks on the game servers with different perks. If you are interested in the software I develop on GitHub I will also provide you with prioritized support. Check it out here: <a href="https://github.com/sponsors/KarlOfDuty" style="color: #0096CF;">https://github.com/sponsors/KarlOfDuty</a><br>
-                    <br>
-                    <b>Server Specs:</b><br>
-                    <br>
-                    <b>Processor:</b> Intel Core i7-8700 Hexa-Core (6x 4.60 GHz /w hyperthreading)<br>
-                    <b>Memory:</b> 64 GB<br>
-                    <b>Drive:</b> 2x 1 TB NVMe SSDs (Configured in Raid 1 for data redundancy and performance)<br>
-                </td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <br />
+<body class="pt-7">
+
+<div class="container">
+  <main role="main">
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body d-flex align-items-center">
+            <img src="img/tardisIcon.jpg" alt="Tardis avatar" class="page-header-icon rounded-circle me-3">
+            <div>
+              <h5 class="card-title mb-0 fw-bold">KarlofDuty</h5>
+              <p class="text-muted small mb-0">Software Engineer & Server Administrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3">
+            <h5 class="card-title mb-0 fw-bold">About</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              I am a software developer making Discord bots, server tools and game mods.
+              All of my work is available for free and open source on GitHub.
+            </p>
+            <p class="card-text">
+              Most of my projects can be installed from my RPM repo, DEB repo, the AUR, and manual download on each respective Github project.
+              Tell me if you want one of my other projects added there too.
+            </p>
+            <p class="card-text">
+              I also host some game servers which you can find in the Discord server to the left.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3">
+            <h5 class="card-title mb-0 fw-bold">Links</h5>
+          </div>
+          <div class="card-body p-0">
+            <div class="row p-0 m-0">
+              <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
+                <a href="https://github.com/KarlOfDuty" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
+                  <img src="img/github-logo-black.svg" alt="GitHub" class="link-icon ms-3 me-3">
+                  <div class="flex-fill">
+                    <p class="mb-0 small fw-bold text-reset">GitHub</p>
+                    <p class="mb-0 small text-muted">@KarlOfDuty</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
+                <a href="https://discord.gg/C5qMvkj" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
+                  <img src="img/discord-logo-colourful.svg" alt="Discord" class="link-icon ms-3 me-3">
+                  <div class="flex-fill">
+                    <p class="mb-0 small fw-bold text-reset">Discord</p>
+                    <p class="mb-0 small text-muted">Join the Discord server</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
+                <a href="https://aur.archlinux.org/packages?SeB=m&K=KarlofDuty" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
+                  <img src="img/archlinux-logo-colourful.svg" alt="AUR" class="link-icon ms-3 me-3">
+                  <div class="flex-fill">
+                    <p class="mb-0 small fw-bold text-reset">Arch User Repository</p>
+                    <p class="mb-0 small text-muted">AUR Packages</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
+                <a href="https://jenkins.karlofduty.com" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
+                  <img src="img/jenkins-logo-ukraine.svg" alt="Jenkins" class="link-icon ms-3 me-3">
+                  <div class="flex-fill">
+                    <p class="mb-0 small fw-bold text-reset">Jenkins</p>
+                    <p class="mb-0 small text-muted">Build Server</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
+                <a href="https://repo.karlofduty.com" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
+                  <img src="img/download-cloud-black.svg" alt="Repo" class="link-icon ms-3 me-3">
+                  <div class="flex-fill">
+                    <p class="mb-0 small fw-bold text-reset">Repo Server</p>
+                    <p class="mb-0 small text-muted">RPM and DEB Package Repos</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mb-3 mt-5">Projects</h3>
+    <div class="row">
+      <!-- Bot / Small Plugin Cards -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0 fw-bold">SCPDiscord</h5>
+            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/SCPDiscord" target="_blank">
+              <img src="img/github-logo-black.svg" alt="GitHub">
+            </a>
+          </div>
+          <div class="card-body pt-4">
+            <p class="card-text small text-muted">A LabAPI plugin which adds remote interaction to an SCP:SL server through Discord.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0 fw-bold">SupportBoi</h5>
+            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/SupportBoi" target="_blank">
+              <img src="img/github-logo-black.svg" alt="GitHub">
+            </a>
+          </div>
+          <div class="card-body pt-4">
+            <p class="card-text small text-muted">A support ticket Discord bot designed to manage user inquiries efficiently.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0 fw-bold">RoleBoi</h5>
+            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/RoleBoi" target="_blank">
+              <img src="img/github-logo-black.svg" alt="GitHub">
+            </a>
+          </div>
+          <div class="card-body pt-4">
+            <p class="card-text small text-muted">A small role management Discord bot for automated role assignments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0 fw-bold">EarthMC</h5>
+            <span>
+              <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/EarthMC" target="_blank">
+                <img src="img/github-logo-black.svg" alt="GitHub">
+              </a>
+              <a class="card-header-icon p-0 d-flex float-end border-0" href="https://earthmc.net" target="_blank">
+                <img src="img/globe-black.svg" alt="Website">
+              </a>
+            </span>
+          </div>
+          <div class="card-body pt-4">
+            <span class="text-muted">
+              <p class="card-text small">
+                Back in 2016 a friend of mine came to me with a pretty cool idea for a Minecraft server he wanted to work on together.
+                An earth map with claimable land using Towny, and an economy based on normal Minecraft gold.
+                We also felt that everything should be a vanilla as possible, no custom items or blocks modded in for example.
+              </p>
+              <p class="card-text small">
+                There were many servers using Factions for territory claiming rather than Towny.
+                Factions was too focused on PvP and taking others' territory so we went for the more peaceful Towny.
+              </p>
+              <p class="card-text small">
+                Towny lets players build together with others within their own Towns without fear of losing anything.
+                However, outside of the towns anyone can build or destroy freely, and kill other players for their stuff if they aren't careful.
+              </p>
+              <p class="card-text small">
+                This led to a very enjoyable mix of creativity and PvP that most creative/PvP servers back then didn't have.
+                Especially because the server doesn't have any pay-to-win mechanics, which is a plague that almost all Minecraft servers were and are infected by.
+              </p>
+              <p class="card-text small">
+                After a few months of basically only me playing regularly, the server had a surge of activity leading to always having around 30 players concurrently.
+                About a year later this had grown to around 150 players (and almost as many in the queue to get into the server) which was the maximum the server software could handle at the time.
+              </p>
+              <p class="card-text small">
+                This made us one of the most popular servers in the world, which was pretty fun. It did however become too time consuming to keep up with while studying/working so I left it a few years ago.
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0 fw-bold">ServerMod (Smod2)</h5>
+            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/ServerMod" target="_blank">
+              <img src="img/github-logo-black.svg" alt="GitHub">
+            </a>
+          </div>
+          <div class="card-body pt-4">
+            <span class="text-muted">
+              <p class="card-text small">
+                When I first set up my SCP:SL servers there were no Discord plugins, so I joined the only modding community for the game at the time, Smod2.
+                I created SCPDiscord which became the most used SCP:SL plugin back when there was still a way to measure that.
+              </p>
+              <p class="card-text small">
+                SCP:SL then had a long period without updates where it looked like the game may become abandoned by its developers.
+              </p>
+              <p class="card-text small">
+                This caused much of the existing Smod modding community to dwindle so when the game started getting updates again there were almost no Smod maintainers left.
+              </p>
+              <p class="card-text small">
+                The game developers had started working on an official modding API to replace Smod which was supposed to be released shortly after the new game update.
+              </p>
+              <p class="card-text small">
+                When this didn't happen for a few months I started porting the old modding API to the overhauled game version and I maintained it for about a year until the official API was released.
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="footer text-muted py-4 mt-auto">
+  <div class="container text-center small">
+    &copy; 2026 - Karl Essinger - Bootstrap theme: <a href="https://github.com/simzikov/dashbrd">Dashbrd</a>
+  </div>
+</footer>
+
+<script src="~/lib/dashbrd/js/vendor.bundle.js"></script>
+<script src="~/lib/dashbrd/js/theme.bundle.js"></script>
+
 </body>
 </html>
