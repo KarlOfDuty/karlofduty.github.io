@@ -22,6 +22,18 @@ body {
   min-width: 12rem;
 }
 
+.card-header-icon {
+  border-width: 0;
+  margin-top: -2px;
+  margin-left: 20px;
+  margin-right: -7px;
+}
+
+.card-header-icon img {
+  width: 20px;
+  height: 20px;
+}
+
 /* Re-enable button outlines */
 .btn-outline-primary {
   --bs-btn-border-color: var(--bs-primary);
