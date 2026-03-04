@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>KarlofDuty.com</title>
+    <script>
+        (function() {
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+
+            const getPreferredTheme = () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            };
+
+            const setTheme = theme => {
+                document.documentElement.setAttribute('data-bs-theme', theme);
+            };
+
+            @*const updateImages = (theme) => {
+                const isDark = theme === 'dark';
+                document.querySelectorAll('img[src*="-black.svg"]').forEach(img => {
+                    if (isDark) {
+                        img.src = img.src.replace('-black.svg', '-white.svg');
+                    }
+                });
+                document.querySelectorAll('img[src*="-white.svg"]').forEach(img => {
+                    if (!isDark) {
+                        img.src = img.src.replace('-white.svg', '-black.svg');
+                    }
+                });
+            };*@
+
+            const activeTheme = getPreferredTheme();
+            setTheme(activeTheme);
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (!storedTheme) {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                setTheme(getPreferredTheme());
+                const btn = document.getElementById('theme-toggle');
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+                        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                        setStoredTheme(newTheme);
+                        setTheme(newTheme);
+                    });
+                }
+            });
+        })();
+    </script>
     <link rel="icon" type="image/icon" href="~/img/favicon.ico" />
     <meta content="KarlofDuty.com - Game servers and mods" property="og:title">
     <meta content="I create server software and game mods and also host my own servers for a number of games." property="og:description">
@@ -29,7 +84,9 @@
 
 <footer class="footer text-muted py-4 mt-auto">
     <div class="container text-center small">
-        &copy; 2026 - Karl Essinger - Bootstrap theme: <a href="https://github.com/simzikov/dashbrd">Dashbrd</a>
+        <div>
+            &copy; 2026 - Karl Essinger - Bootstrap theme: <a href="https://github.com/simzikov/dashbrd">Dashbrd</a>
+        </div>
     </div>
 </footer>
 
