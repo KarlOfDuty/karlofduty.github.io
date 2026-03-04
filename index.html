@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>KarlofDuty.com</title>
+  <script>
+    (function() {
+        const getStoredTheme = () => localStorage.getItem('theme');
+        const setStoredTheme = theme => localStorage.setItem('theme', theme);
+
+        const getPreferredTheme = () => {
+            const storedTheme = getStoredTheme();
+            if (storedTheme) {
+                return storedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        const setTheme = theme => {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+        };
+
+        const activeTheme = getPreferredTheme();
+        setTheme(activeTheme);
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            const storedTheme = getStoredTheme();
+            if (!storedTheme) {
+                setTheme(getPreferredTheme());
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTheme(getPreferredTheme());
+            const btn = document.getElementById('theme-toggle');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    setStoredTheme(newTheme);
+                    setTheme(newTheme);
+                });
+            }
+        });
+    })();
+  </script>
   <link rel="icon" type="image/icon" href="img/favicon.ico" />
   <meta content="KarlofDuty.com - Game servers and mods" property="og:title">
   <meta content="I create server software and game mods and also host my own servers for a number of games." property="og:description">
@@ -26,10 +67,12 @@
         <div class="card shadow-sm">
           <div class="card-body d-flex align-items-center">
             <img src="img/tardisIcon.jpg" alt="Tardis avatar" class="page-header-icon rounded-circle me-3">
-            <div>
+            <div class="flex-grow-1">
               <h5 class="card-title mb-0 fw-bold">KarlofDuty</h5>
               <p class="text-muted small mb-0">Software Engineer & Server Administrator</p>
             </div>
+            <button id="theme-toggle" class="theme-icon float-end icon-bg" title="Toggle theme">
+            </button>
           </div>
         </div>
       </div>
@@ -65,16 +108,16 @@
             <div class="row p-0 m-0">
               <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
                 <a href="https://github.com/KarlOfDuty" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
-                  <img src="img/github-logo-black.svg" alt="GitHub" class="link-icon ms-3 me-3">
+                  <div class="github-icon icon-bg link-icon ms-3 me-3"></div>
                   <div class="flex-fill">
                     <p class="mb-0 small fw-bold text-reset">GitHub</p>
-                    <p class="mb-0 small text-muted">@KarlOfDuty</p>
+                    <p class="mb-0 small text-muted">@@KarlOfDuty</p>
                   </div>
                 </a>
               </div>
               <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
                 <a href="https://discord.gg/C5qMvkj" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
-                  <img src="img/discord-logo-colourful.svg" alt="Discord" class="link-icon ms-3 me-3">
+                  <div class="discord-icon icon-bg link-icon ms-3 me-3"></div>
                   <div class="flex-fill">
                     <p class="mb-0 small fw-bold text-reset">Discord</p>
                     <p class="mb-0 small text-muted">Join the Discord server</p>
@@ -83,7 +126,7 @@
               </div>
               <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
                 <a href="https://aur.archlinux.org/packages?SeB=m&K=KarlofDuty" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
-                  <img src="img/archlinux-logo-colourful.svg" alt="AUR" class="link-icon ms-3 me-3">
+                  <div class="aur-icon icon-bg link-icon ms-3 me-3"></div>
                   <div class="flex-fill">
                     <p class="mb-0 small fw-bold text-reset">Arch User Repository</p>
                     <p class="mb-0 small text-muted">AUR Packages</p>
@@ -92,7 +135,7 @@
               </div>
               <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
                 <a href="https://jenkins.karlofduty.com" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
-                  <img src="img/jenkins-logo-ukraine.svg" alt="Jenkins" class="link-icon ms-3 me-3">
+                  <div class="jenkins-icon icon-bg link-icon ms-3 me-3"></div>
                   <div class="flex-fill">
                     <p class="mb-0 small fw-bold text-reset">Jenkins</p>
                     <p class="mb-0 small text-muted">Build Server</p>
@@ -101,7 +144,7 @@
               </div>
               <div class="col-xxl-4 col-lg-6 col-md-12 p-0 link-column list-group list-group-flush">
                 <a href="https://repo.karlofduty.com" target="_blank" class="list-group-item list-group-item-action pe-0 ps-2 d-flex align-items-start">
-                  <img src="img/download-cloud-black.svg" alt="Repo" class="link-icon ms-3 me-3">
+                  <div class="repo-icon icon-bg link-icon ms-3 me-3"></div>
                   <div class="flex-fill">
                     <p class="mb-0 small fw-bold text-reset">Repo Server</p>
                     <p class="mb-0 small text-muted">RPM and DEB Package Repos</p>
@@ -121,12 +164,10 @@
         <div class="card shadow-sm h-100">
           <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
             <h5 class="card-title mb-0 fw-bold">SCPDiscord</h5>
-            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/SCPDiscord" target="_blank">
-              <img src="img/github-logo-black.svg" alt="GitHub">
-            </a>
+            <a class="card-header-icon github-icon icon-bg p-0 rounded-circle float-end" href="https://github.com/KarlofDuty/SCPDiscord" target="_blank"></a>
           </div>
           <div class="card-body pt-4">
-            <p class="card-text small text-muted">A LabAPI plugin which adds remote interaction to an SCP:SL server through Discord.</p>
+            <p class="card-text">A LabAPI plugin which adds remote interaction to an SCP:SL server through Discord.</p>
           </div>
         </div>
       </div>
@@ -134,12 +175,10 @@
         <div class="card shadow-sm h-100">
           <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
             <h5 class="card-title mb-0 fw-bold">SupportBoi</h5>
-            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/SupportBoi" target="_blank">
-              <img src="img/github-logo-black.svg" alt="GitHub">
-            </a>
+            <a class="card-header-icon github-icon icon-bg p-0 rounded-circle float-end" href="https://github.com/KarlofDuty/SupportBoi" target="_blank"></a>
           </div>
           <div class="card-body pt-4">
-            <p class="card-text small text-muted">A support ticket Discord bot designed to manage user inquiries efficiently.</p>
+            <p class="card-text">A support ticket Discord bot designed to manage user inquiries efficiently.</p>
           </div>
         </div>
       </div>
@@ -147,12 +186,10 @@
         <div class="card shadow-sm h-100">
           <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
             <h5 class="card-title mb-0 fw-bold">RoleBoi</h5>
-            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/KarlOfDuty/RoleBoi" target="_blank">
-              <img src="img/github-logo-black.svg" alt="GitHub">
-            </a>
+            <a class="card-header-icon github-icon icon-bg p-0 rounded-circle float-end" href="https://github.com/KarlofDuty/RoleBoi" target="_blank"></a>
           </div>
           <div class="card-body pt-4">
-            <p class="card-text small text-muted">A small role management Discord bot for automated role assignments.</p>
+            <p class="card-text">A small role management Discord bot for automated role assignments.</p>
           </div>
         </div>
       </div>
@@ -161,38 +198,34 @@
           <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
             <h5 class="card-title mb-0 fw-bold">EarthMC</h5>
             <span>
-              <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/EarthMC" target="_blank">
-                <img src="img/github-logo-black.svg" alt="GitHub">
-              </a>
-              <a class="card-header-icon p-0 d-flex float-end border-0" href="https://earthmc.net" target="_blank">
-                <img src="img/globe-black.svg" alt="Website">
-              </a>
+              <a class="card-header-icon github-icon icon-bg p-0 rounded-circle float-end" href="https://github.com/EarthMC" target="_blank"></a>
+              <a class="card-header-icon url-icon icon-bg p-0 rounded-circle float-end" href="https://earthmc.net" target="_blank"></a>
             </span>
           </div>
           <div class="card-body pt-4">
-            <span class="text-muted">
-              <p class="card-text small">
+            <span class="card-text">
+              <p>
                 Back in 2016 a friend of mine came to me with a pretty cool idea for a Minecraft server he wanted to work on together.
                 An earth map with claimable land using Towny, and an economy based on normal Minecraft gold.
                 We also felt that everything should be a vanilla as possible, no custom items or blocks modded in for example.
               </p>
-              <p class="card-text small">
+              <p>
                 There were many servers using Factions for territory claiming rather than Towny.
                 Factions was too focused on PvP and taking others' territory so we went for the more peaceful Towny.
               </p>
-              <p class="card-text small">
+              <p>
                 Towny lets players build together with others within their own Towns without fear of losing anything.
                 However, outside of the towns anyone can build or destroy freely, and kill other players for their stuff if they aren't careful.
               </p>
-              <p class="card-text small">
+              <p>
                 This led to a very enjoyable mix of creativity and PvP that most creative/PvP servers back then didn't have.
                 Especially because the server doesn't have any pay-to-win mechanics, which is a plague that almost all Minecraft servers were and are infected by.
               </p>
-              <p class="card-text small">
+              <p>
                 After a few months of basically only me playing regularly, the server had a surge of activity leading to always having around 30 players concurrently.
                 About a year later this had grown to around 150 players (and almost as many in the queue to get into the server) which was the maximum the server software could handle at the time.
               </p>
-              <p class="card-text small">
+              <p>
                 This made us one of the most popular servers in the world, which was pretty fun. It did however become too time consuming to keep up with while studying/working so I left it a few years ago.
               </p>
             </span>
@@ -203,26 +236,24 @@
         <div class="card shadow-sm h-100">
           <div class="card-header pb-3 pt-4 d-flex justify-content-between align-items-center">
             <h5 class="card-title mb-0 fw-bold">ServerMod (Smod2)</h5>
-            <a class="card-header-icon p-0 d-flex float-end" href="https://github.com/ServerMod" target="_blank">
-              <img src="img/github-logo-black.svg" alt="GitHub">
-            </a>
+            <a class="card-header-icon github-icon icon-bg p-0 rounded-circle float-end" href="https://github.com/ServerMod" target="_blank"></a>
           </div>
           <div class="card-body pt-4">
-            <span class="text-muted">
-              <p class="card-text small">
+            <span class="card-text">
+              <p>
                 When I first set up my SCP:SL servers there were no Discord plugins, so I joined the only modding community for the game at the time, Smod2.
                 I created SCPDiscord which became the most used SCP:SL plugin back when there was still a way to measure that.
               </p>
-              <p class="card-text small">
+              <p>
                 SCP:SL then had a long period without updates where it looked like the game may become abandoned by its developers.
               </p>
-              <p class="card-text small">
+              <p>
                 This caused much of the existing Smod modding community to dwindle so when the game started getting updates again there were almost no Smod maintainers left.
               </p>
-              <p class="card-text small">
+              <p>
                 The game developers had started working on an official modding API to replace Smod which was supposed to be released shortly after the new game update.
               </p>
-              <p class="card-text small">
+              <p>
                 When this didn't happen for a few months I started porting the old modding API to the overhauled game version and I maintained it for about a year until the official API was released.
               </p>
             </span>
@@ -230,6 +261,7 @@
         </div>
       </div>
     </div>
+
   </main>
 </div>
 
